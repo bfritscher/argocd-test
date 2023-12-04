@@ -12,7 +12,8 @@ spec:
   project: default
   source:
     repoURL: https://github.com/argoproj/argocd-example-apps.git
-    chart: helm-guestbook
+    path: helm-guestbook
+    targetRevision: HEAD
     helm:
       valuesObject:
         service:
