@@ -18,3 +18,4 @@ spec:
       valuesObject:
         service:
           port: 8082
+          type: LoadBalancer
