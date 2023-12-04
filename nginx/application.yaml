@@ -7,7 +7,6 @@ metadata:
     name: nginx  
 spec:
   destination:
-    name: nginx
     namespace: default
     server: 'https://kubernetes.default.svc'
   project: default
@@ -19,5 +18,5 @@ spec:
       valueFiles:
       - $values/nginx/values.yaml
   - repoURL: 'https://github.com/bfritscher/argocd-test.git'
-    targetRevision: main
+    targetRevision: HEAD
     ref: values
