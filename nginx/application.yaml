@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+  namespace: argocd
+  labels:
+    name: nginx  
+spec:
+  sources:
+  - repoURL: 'oci://registry-1.docker.io/bitnamicharts/'
+    chart: nginx
+    targetRevision: 15.4.3
+    helm:
+      valueFiles:
+      - $values/nginx/values.yaml
+  - repoURL: 'https://github.com/bfritscher/argocd-test.git'
+    targetRevision: main
+    ref: values
