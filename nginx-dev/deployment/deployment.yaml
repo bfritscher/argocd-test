@@ -5,7 +5,7 @@ metadata:
     app.kubernetes.io/name: hec-surveillance-frontend
   name: hec-surveillance-frontend
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app.kubernetes.io/name: hec-surveillance-frontend
