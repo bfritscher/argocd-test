@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: app-of-apps
   namespace: argocd
-  labels:
-    name: app-of-apps
 spec:
   destination:
     namespace: argocd
@@ -13,9 +11,6 @@ spec:
   source:
     repoURL: https://github.com/bfritscher/argocd-test.git
     targetRevision: HEAD
-    path: .
-    directory:
-      include: 'application*.yaml'
-      recurse: true
+    path: apps
   syncPolicy:
     automated: {}
