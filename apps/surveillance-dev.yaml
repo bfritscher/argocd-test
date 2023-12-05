@@ -12,8 +12,6 @@ spec:
     repoURL: https://github.com/bfritscher/argocd-test.git
     path: nginx-dev
     targetRevision: HEAD
-    directory:
-      recurse: true
     kustomize:
       namePrefix: dev-
       patches:
