@@ -21,7 +21,7 @@ spec:
         # emailHost: smtp.example.com
         # emailUser:
         #emailPassword:
-        # siteDomain:
+        siteDomain: localhost:8083
         siteTitle: Test Weblate
         service:
           type: LoadBalancer
@@ -39,5 +39,5 @@ spec:
           WEBLATE_SOCIAL_AUTH_KEYCLOAK_SECRET: E2j4yAT7tcNCn7ul3Myv70pKLpE5nShW
           WEBLATE_SOCIAL_AUTH_KEYCLOAK_PUBLIC_KEY: MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAsEfYEABSaJJn1pXNBeuuUebPdKumuO0IWF6blk4CbEeC7s/uI7bY8rAyYgybSoNdVtcR5x8wwX1N2qTeotWkzLzfUhSp/CZcIIrJLCJJgr9fM4LQllzyu6J30XTcjDHw+zCqfzVHZhrwRmHXabN1PpwojhmTJOJreIXEYm2RAQK3ocKzNaHpXbsVluv1HTc+Uz2RVA9SWfq8YBMRdv3SpNQuiBGaVZrUTp86C3zGa+ESoFD+B2/qN0S2GBYzqjSG7L5QkxSdvGxUicRrKPtktEoMQCFeuLbTT4uJmHH0oCAjqKmKvSdbkfUxTjp+Lln1+EcZDQCPsUt8fc14NpFdGCPwyFHFEJtYPjps3eoEmN3ibfI+eh8rpmfrCVHneywoe0hAdh75V2dkD/z0nDyBgqzdMI+VagCVvZwYqhICI6YHCGV75xOv7aybr0MQzt28dI9+bRxGZ1D874LbnpxIyhYEy9zwWMwXpKnYvQlD2US3BvO5xHd2TzQ8triNIBuFAgMBAAE=
           WEBLATE_SOCIAL_AUTH_KEYCLOAK_ALGORITHM: RS256
-          WEBLATE_SOCIAL_AUTH_KEYCLOAK_AUTHORIZATION_URL: https://hec-iam.unil.ch/auth/realms/weblate/protocol/openid-connect/auth
-          WEBLATE_SOCIAL_AUTH_KEYCLOAK_ACCESS_TOKEN_URL: https://hec-iam.unil.ch/auth/realms/weblate/protocol/openid-connect/token
+          WEBLATE_SOCIAL_AUTH_KEYCLOAK_AUTHORIZATION_URL: https://hec-iam.unil.ch/realms/hec/protocol/openid-connect/auth
+          WEBLATE_SOCIAL_AUTH_KEYCLOAK_ACCESS_TOKEN_URL: https://hec-iam.unil.ch/realms/hec/protocol/openid-connect/token
