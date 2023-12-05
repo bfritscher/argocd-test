@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-test-surveillance-dev
+  namespace: argocd
+spec:
+  destination:
+    namespace: dev
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://github.com/bfritscher/argocd-test.git
+    path: nginx-dev
+    targetRevision: HEAD
+    directory:
+      recurse: true
+    kustomize:
+      namePrefix: dev-
+      patches:
+        - target:
+            kind: Service
+            name: hec-surveillance-frontend
+          patch: |-
+            - op: replace
+              path: /spec/type
+              value: LoadBalancer
