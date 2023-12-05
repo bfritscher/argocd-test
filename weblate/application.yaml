@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+  namespace: argocd
+  labels:
+    name: nginx  
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: 'https://helm.weblate.org'
+    chart: weblate/weblate
+    targetRevision: 0.5.3
+    helm:
+      valuesObject:
+        adminEmail: admin@example.com
+        adminPassword: admin
+        # emailHost: smtp.example.com
+        # emailUser:
+        #emailPassword:
+        # siteDomain:
+        siteTitle: Test Weblate
+        service:
+          type: LoadBalancer
+          port: 8083
+        ingress:
+          enabled: true
+          hosts:
+            - host:
+              paths:
+                - path: /
