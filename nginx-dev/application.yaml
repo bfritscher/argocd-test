@@ -5,9 +5,9 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: default
+    namespace: dev
     server: https://kubernetes.default.svc
-  project: dev
+  project: default
   source:
     repoURL: https://github.com/bfritscher/argocd-test.git
     path: nginx-dev
