@@ -7,5 +7,5 @@ commonLabels:
   app: hec-surveillance
 
 resources:
-- deployment/
-- service/
+- deployment/deployment.yaml
+- service/service.yaml
