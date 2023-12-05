@@ -1,19 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-apps
+  name: surveillance-dev
   namespace: argocd
-  labels:
-    name: app-of-apps
 spec:
   destination:
-    namespace: argocd
+    namespace: dev
     server: https://kubernetes.default.svc
-  project: default
+  project: dev
   source:
     repoURL: https://github.com/bfritscher/argocd-test.git
+    path: nginx-dev
     targetRevision: HEAD
-    path: .
     directory:
-      include: 'application*.yaml'
       recurse: true

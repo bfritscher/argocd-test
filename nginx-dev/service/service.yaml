@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hec-surveillance-frontend
+spec:
+  ports:
+    - name: http
+      port: 8081
+      protocol: TCP
+      targetPort: 80
+  selector:
+     app.kubernetes.io/name: hec-surveillance-frontend
+  sessionAffinity: None
+  type: ClusterIP
