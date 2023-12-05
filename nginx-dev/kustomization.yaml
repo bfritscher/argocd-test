@@ -3,9 +3,6 @@ kind: Kustomization
 metadata:
   name: hec-surveillance
 
-commonLabels:
-  app: hec-surveillance
-
 resources:
 - deployment/deployment.yaml
 - service/service.yaml
