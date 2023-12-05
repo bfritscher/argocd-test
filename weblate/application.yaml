@@ -26,10 +26,10 @@ spec:
         service:
           type: LoadBalancer
           port: 8083
-        ingress:
-          enabled: true
-          hosts:
-            - host:
-              paths:
-                - path: /
-                  pathType: Prefix
+        # ingress:
+        #   enabled: true
+        #   hosts:
+        #     - host:
+        #       paths:
+        #         - path: /
+        #           pathType: Prefix
