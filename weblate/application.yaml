@@ -32,3 +32,4 @@ spec:
             - host:
               paths:
                 - path: /
+                  pathType: Prefix
