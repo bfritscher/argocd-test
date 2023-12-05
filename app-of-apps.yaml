@@ -17,3 +17,5 @@ spec:
     directory:
       include: 'application*.yaml'
       recurse: true
+  syncPolicy:
+    automated: {}
